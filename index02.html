@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>titulo da minha conta</h1>
+
+    <nav>
+        <a href="https://google.com" target="_blank">link</a>
+    </nav>
+
+    <div>
+        <p>Lorem ipsum <del>dolor sit amet</del> consectetur adipisicing elit. <mark>Neque in</mark> provident non iste est aperiam molestias, quo quidem tempore? Non, laudantium voluptatem? Quia aspernatur sed quibusdam alias pariatur numquam assumenda?</p>
+
+        <p>
+            10<sub>2</sub> <br>
+            6.23x10<sup>23</sup>
+        </p>
+
+        <span>churrasco</span>
+        <span>churrasco</span>
+        <input type="text">
+        <input type="text">
+        <p>churraasco</p>
+        <p>churraasco</p>
+    </div>
+
+    <ul>
+        <li>carne</li>
+        <li>batata</li>
+        <li>pao de alho</li>
+    </ul>
+    <ol type="a" start="10">
+        <li>carne</li>
+        <li>batata</li>
+        <li>pao de alho</li>
+    </ol>
+    <dl>
+        <dt>café</dt>
+        <dd>vida</dd>
+    </dl>  
+
+    <hr></hr>
+    <table>
+        <caption>churrasco 2026-2</caption>
+        <thead>
+        <tr></tr>
+        <tr>
+            <th>indice</th>
+            <th>nome</th>
+            <th>quantidade</th>
+            <th>valor item</th>
+            <th>valor</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>carne</td>
+            <td>4</td>
+            <td>40,00</td>
+            <td>160,00</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>pao de alho</td>
+            <td>3</td>
+            <td>15,00</td>
+            <td>45,00</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>romopos</td>
+            <td>10</td>
+            <td>10,00</td>
+            <td>100,00</td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <td colspan="4">total</td>
+            <td>295,00</td>
+        </tr>
+        </tfoot>
+    </table>
+    <P>obs: na casa do teteu</P>
+
+    <form action="http://google.com/search">
+    <div> 
+        <label for="busca">termos</label>
+        <input id="busca" name="q" type="text" placeholder="teste..." value="carne">
+
+        <input type="color">
+
+        <input type="submit" value="pesquisar">
+    </div>
+    </form>
+
+    <canvas id="canvas" height="100px" width="600px"></canvas>
+
+    <script>
+
+        desenhando=false;
+
+        const ctx = canvas.getContext("2d");
+        ctx.lineWidth=5;
+        canvas.addEventListener("mousedown", (e)=>{
+            desenhando=true;
+            ctx.moveTo(e.offsetX, e.offsetY);
+        })
+
+        canvas.addEventListener("mouseup", (e)=>{
+            desenhando=false;
+        })
+
+
+        canvas.addEventListener("mousedown", (e)=>{
+            if (desenhando){
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+            }
+        })       
+
+    </script>
+
+</body>
+</html>
